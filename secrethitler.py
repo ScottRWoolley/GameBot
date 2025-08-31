@@ -138,8 +138,8 @@ class SecretHitlerGame(Game):
                 await self.channelContext.send("you did not fail")
                 self.chancellor = self.cNom
                 self.termLimited = []
-                # self.termLimited.append(self.president)
-                # self.termLimited.append(self.chancellor)
+                self.termLimited.append(self.president)
+                self.termLimited.append(self.chancellor)
                 self.electionFails = 0
                 if await self.checkWin():
                     return
