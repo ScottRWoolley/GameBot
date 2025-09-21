@@ -86,7 +86,7 @@ async def setupflipseven(playerIDs, playerNames, ctx):
     turnordertext = "turn order:\n"
     for player in turnOrder:
         turnordertext += player
-        if turnOrder.find(player) != len(turnOrder) - 1:
+        if turnOrder.index(player) != len(turnOrder) - 1:
             turnordertext += "\n"
     await ctx.send(turnordertext)
     # message = f"{deck[0].get_emoji_string(ctx)} this is a {deck[0].value}"

@@ -65,7 +65,7 @@ def main():
     async def seven(ctx):
         game = await start(ctx)
         setupGamesRunning("seven", game)
-        await flipseven.setupflipseven(game.playerIds, list(i.name for i in game.playerIds), ctx)
+        await flipseven.setupflipseven(game.playerIds, [i.name for i in game.playerIds], ctx)
     
     @bot.command()
     async def quiplash(ctx):
