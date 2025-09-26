@@ -109,8 +109,8 @@ async def newVote(reaction, user):
             for key, value in game.answers.items():
                 if reaction.message.content == value:
                     print(key)
-                    #for key, value in game.answers.items():
-                    #    await game.channelContext.send(value)
+                    for key, value in game.answers.items():
+                        await game.channelContext.send(value)
                     await game.channelContext.send(f"{key.nickname} Won this round!")
                     key.points += 1
                     await game.newRound()
